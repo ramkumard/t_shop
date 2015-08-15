@@ -21,8 +21,9 @@ development:
 
 production:
   adapter: mysql2
-  database: t_shop
-  host: localhost
+  encoding: utf8
+  reconnect: false
+  database: t_shop_production
+  pool: 5
   username: root
   password: root
-  encoding: utf8
