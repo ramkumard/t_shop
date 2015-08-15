@@ -7,5 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require spree/frontend
-
+//= require jquery.scrollUp.min
+//= require zoom
+//= require main
+//= require price-range
 //= require_tree .

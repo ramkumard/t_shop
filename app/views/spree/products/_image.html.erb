@@ -1,0 +1,32 @@
+<div class="easyzoom easyzoom--with-thumbnails">
+<% if defined?(image) && image %>
+  <%= image_tag image.attachment.url(:product), :id => "img_02", :itemprop => "image"%>
+<% else %>
+  <%= link_to product_image(@product,:itemprop=>'image'), @product.images.first.attachment.url(:large), :class => 'zoomer', :width => "310" ,:height => "400" unless @product.images.blank? %>
+<% end %>
+</div>
+
+
+<script type="text/javascript">
+	var $easyzoom = $('.easyzoom').easyZoom();
+		// Setup thumbnails example
+	var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
+	$( document ).ready(function() {
+		$('#product-images ul.thumbnails').find('a').on('click', function(e) {
+			var $this = $(this);
+
+			e.preventDefault();
+
+			// Use EasyZoom's `swap` method
+			api1.swap($this.data('standard'), $this.attr('href'));
+		});
+	});
+</script>
+<style>
+.easyzoom {
+    float: left;
+}
+.easyzoom img {
+    display: block;
+}
+</style>
