@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/ramkumard/custom_banner.git
+  revision: 5939a02c9606d0519e23c6e4e5ce88df12109c5a
+  specs:
+    spree_banner_manager (3.0.0)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/spree-contrib/spree_social.git
   revision: 176a9f1999d47ffee11951e1cbd20779e48a8cf2
   branch: 3-0-stable
@@ -15,7 +22,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
-  revision: b554f307e5aa887110a70d54f8967c284f881375
+  revision: 2e8e08759c4d51bb94065478aee53546d0f05f98
   branch: 3-0-stable
   specs:
     spree_auth_devise (3.0.0)
@@ -72,7 +79,7 @@ GEM
       activerecord (>= 3.0)
     addressable (2.3.8)
     arel (6.0.3)
-    autoprefixer-rails (5.2.1.1)
+    autoprefixer-rails (5.2.1.2)
       execjs
       json
     awesome_nested_set (3.0.2)
@@ -123,9 +130,11 @@ GEM
       warden (~> 1.2.3)
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     excon (0.45.4)
-    execjs (2.5.2)
+    execjs (2.6.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffaker (1.32.1)
@@ -136,17 +145,21 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (3.4.2)
-    heroku (3.8.2)
-      heroku-api (~> 0.3.17)
+    heroku (3.41.3)
+      heroku-api (>= 0.3.19)
       launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
-    heroku-api (0.3.18)
-      excon (~> 0.27)
+      multi_json (>= 1.10)
+      net-ssh-gateway (>= 1.2.0)
+      netrc (>= 0.10.0)
+      rest-client (>= 1.6.0)
+      rubyzip (>= 0.9.9)
+    heroku-api (0.3.23)
+      excon (~> 0.44)
       multi_json (~> 1.8)
     highline (1.6.21)
     htmlentities (4.3.4)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     httparty (0.13.5)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -173,7 +186,7 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
     mini_portile (0.6.2)
-    minitest (5.7.0)
+    minitest (5.8.0)
     monetize (1.3.1)
       money (~> 6.6)
     money (6.6.1)
@@ -182,7 +195,10 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.19)
-    netrc (0.7.7)
+    net-ssh (2.9.2)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
+    netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     oa-core (0.3.2)
@@ -252,7 +268,7 @@ GEM
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.6)
+    rails-dom-testing (1.0.7)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
@@ -279,8 +295,10 @@ GEM
       json (~> 1.4)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rubyzip (1.1.7)
     sass (3.4.16)
     sass-rails (5.0.3)
@@ -350,7 +368,7 @@ GEM
     spree_sample (3.0.0)
       spree_core (= 3.0.0)
     spring (1.3.6)
-    sprockets (3.2.0)
+    sprockets (3.3.1)
       rack (~> 1.0)
     sprockets-rails (2.3.2)
       actionpack (>= 3.0)
@@ -380,6 +398,9 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
     versioncake (2.3.1)
       actionpack (>= 3.2)
       activesupport (>= 3.2)
@@ -410,6 +431,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree (= 3.0.0)
   spree_auth_devise!
+  spree_banner_manager!
   spree_social!
   spring
   turbolinks

@@ -35,6 +35,7 @@ gem 'heroku'
 gem 'spree', '3.0.0'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 gem 'spree_social', github: 'spree-contrib/spree_social', branch: '3-0-stable'
+gem 'spree_banner_manager', github: 'ramkumard/custom_banner'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
